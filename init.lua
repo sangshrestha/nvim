@@ -1,5 +1,5 @@
--- Set `mapleader` before loading lazy.nvim so that the mapping is correct
-vim.g.mapleader = " "
+require("config.options")
+require("config.autocmds")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
