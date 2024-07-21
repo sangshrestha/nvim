@@ -1,33 +1,39 @@
 return {
   "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "folke/neodev.nvim",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
-    require("neodev").setup({})
+    local lspconfig = require("lspconfig")
+    local masonconfig = require("mason-lspconfig")
+    local cmp_lsp = require("cmp_nvim_lsp")
 
-    local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+    -- Extend lsp capabilities
+    local capabilities =
+      vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
+    -- Configure lsp server
     local servers = {
-      lua_ls = {},
+      lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      },
+      tsserver = {},
     }
 
-    require("mason").setup({})
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        "lua_ls",
-        "stylua",
-      },
-    })
-    require("mason-lspconfig").setup({
+    masonconfig.setup({
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          server.capabilities = lsp_capabilities
-          require("lspconfig")[server_name].setup(server)
+
+          server.capabilities = capabilities
+          lspconfig[server_name].setup(server)
         end,
       },
     })

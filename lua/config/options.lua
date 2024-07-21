@@ -10,11 +10,14 @@ opt.relativenumber = true
 -- Highlight current line
 opt.cursorline = true
 
+-- Minimal number of screen lines to keep above and below the cursor.
+opt.scrolloff = 5
+
 -- Indent style
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 
 -- Don't have `o` add a comment
 opt.formatoptions:remove("o")
@@ -24,4 +27,10 @@ opt.formatoptions:remove("O")
 opt.clipboard = "unnamedplus"
 
 -- Save undo history
-vim.opt.undofile = true
+opt.undofile = true
+
+-- Decrease update time
+opt.updatetime = 250
+
+-- Confirm to save changes before exiting buffer
+opt.confirm = true

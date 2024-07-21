@@ -1,5 +1,4 @@
-require("config.options")
-require("config.autocmds")
+require("config")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -19,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins", {
+  -- Do not notify on config change
   change_detection = {
     notify = false,
   },
