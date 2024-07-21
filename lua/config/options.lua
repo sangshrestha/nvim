@@ -10,9 +10,18 @@ opt.relativenumber = true
 -- Highlight current line
 opt.cursorline = true
 
+-- Indent style
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- Don't have `o` add a comment
-opt.formatoptions:remove "o"
-opt.formatoptions:remove "O"
+opt.formatoptions:remove("o")
+opt.formatoptions:remove("O")
 
 -- Sync clipboard with OS
 opt.clipboard = "unnamedplus"
+
+-- Save undo history
+vim.opt.undofile = true
