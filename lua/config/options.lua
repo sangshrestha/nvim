@@ -3,12 +3,15 @@ local opt = vim.opt
 -- Set `mapleader` before loading lazy.nvim so that the mapping is correct
 vim.g.mapleader = " "
 
+-- Don't show netrw banner
+vim.g.netrw_banner = 0
+
 -- Show line numbers
 opt.number = true
 opt.relativenumber = true
 
 -- Highlight current line
-opt.cursorline = true
+opt.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 5
@@ -21,7 +24,6 @@ opt.expandtab = true
 
 -- Don't have `o` add a comment
 opt.formatoptions:remove("o")
-opt.formatoptions:remove("O")
 
 -- Sync clipboard with OS
 opt.clipboard = "unnamedplus"
