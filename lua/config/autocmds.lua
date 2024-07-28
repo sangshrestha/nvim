@@ -30,3 +30,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+-- Remeber last cursor position
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*",
+  desc = "Open file at the last position it was edited earlier",
+  command = 'silent! normal! g`"zv',
+})
