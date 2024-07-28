@@ -27,6 +27,11 @@ return {
     priority = 999,
     opts = {},
     config = function()
+      require("tokyonight").setup({
+        on_colors = function(colors)
+          colors.fg_gutter = "#666d91"
+        end,
+      })
       vim.cmd.colorscheme("tokyonight-moon")
     end,
   },
