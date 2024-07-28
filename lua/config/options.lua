@@ -3,12 +3,18 @@ local opt = vim.opt
 -- Set `mapleader` before loading lazy.nvim so that the mapping is correct
 vim.g.mapleader = " "
 
+-- Disable mouse
+opt.mouse = ""
+
 -- Don't show netrw banner
 vim.g.netrw_banner = 0
 
 -- Show line numbers
 opt.number = true
 opt.relativenumber = true
+
+-- Keep signcolumn on by default
+opt.signcolumn = "yes:1"
 
 -- Highlight current line
 opt.cursorline = false
@@ -36,3 +42,14 @@ opt.updatetime = 250
 
 -- Confirm to save changes before exiting buffer
 opt.confirm = true
+
+-- Show source in diagnostics
+vim.diagnostic.config({
+  severity_sort = true,
+  virtual_text = {
+    source = "always", -- Or "if_many"
+  },
+  float = {
+    source = "always", -- Or "if_many"
+  },
+})
