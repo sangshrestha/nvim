@@ -20,8 +20,8 @@ return {
         { name = "path" },
       },
       mapping = {
-        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = "select" }),
+        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
         ["<Tab>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
       },
       snippet = {
