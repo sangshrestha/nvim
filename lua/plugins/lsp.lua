@@ -58,7 +58,7 @@ return {
 
     -- Extend lsp capabilities
     local capabilities = {}
-    -- vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
+    vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
     -- Configure lsp server
     local servers = {
