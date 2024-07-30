@@ -20,7 +20,7 @@ return {
       autochdir = true,
       start_in_insert = true,
       direction = "vertical",
-      shading_factor = -6,
+      shading_factor = -10,
     })
   end,
 }
