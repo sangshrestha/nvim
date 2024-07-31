@@ -4,7 +4,9 @@ return {
     local computeHorizontalSize = function()
       local width = vim.api.nvim_win_get_width(0) * 2
 
-      if width - 100 > 100 then
+      local desired_terminal_width = 100
+
+      if width - 100 > desired_terminal_width then
         return width - 100
       else
         return width
