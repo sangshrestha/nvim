@@ -28,9 +28,6 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 
--- Don't have `o` add a comment
-opt.formatoptions:remove("o")
-
 -- Sync clipboard with OS
 opt.clipboard = "unnamedplus"
 
