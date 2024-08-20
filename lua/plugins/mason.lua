@@ -14,6 +14,8 @@ return {
         "tsserver",
         "prettier",
         "prettierd",
+        "pylsp",
+        "black",
       },
     })
   end,

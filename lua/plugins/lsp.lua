@@ -72,6 +72,17 @@ return {
         },
       },
       tsserver = {},
+      pylsp = {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                enabled = false,
+              },
+            },
+          },
+        },
+      },
     }
 
     masonconfig.setup({
