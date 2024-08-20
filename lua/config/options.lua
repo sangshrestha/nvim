@@ -30,6 +30,10 @@ opt.expandtab = true
 
 -- Sync clipboard with OS
 opt.clipboard = "unnamedplus"
+--
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+opt.ignorecase = true
+opt.smartcase = true
 
 -- Save undo history
 opt.undofile = true
