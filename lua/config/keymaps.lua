@@ -6,6 +6,8 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -- Scroll two lines at once
 vim.keymap.set("n", "<C-e>", "2<C-e>", { desc = "Scroll down 2 lines" })
 vim.keymap.set("n", "<C-y>", "2<C-y>", { desc = "Scroll up 2 lines" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Paste without losing yank register
 vim.keymap.set("x", "<leader>p", [["_dP]])

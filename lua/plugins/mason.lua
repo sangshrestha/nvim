@@ -18,6 +18,8 @@ return {
 				"prettierd",
 				"pylsp",
 				"black",
+				"clangd",
+				"clang-format",
 			},
 		})
 	end,

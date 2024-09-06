@@ -12,6 +12,7 @@ return {
 			typescript = { "prettierd", "prettier", stop_after_first = true },
 			vue = { "prettierd", "prettier", stop_after_first = true },
 			python = { "black" },
+			c = { "clang-format" },
 		},
 	},
 }
