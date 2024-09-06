@@ -18,19 +18,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
---  Opening neovim from a folder sets the folder path as the root directory
-vim.api.nvim_create_autocmd("VimEnter", {
-	desc = "Opening neovim from a folder sets the folder path as the root directory",
-	group = vim.api.nvim_create_augroup("cdpwd", { clear = true }),
-	pattern = "*",
-	callback = function()
-		local path = vim.fn.expand("<amatch>")
-		if vim.fn.isdirectory(path) == 1 then
-			vim.cmd("cd " .. path)
-		end
-	end,
-})
-
 -- Remeber last cursor position in file
 vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = "*",
