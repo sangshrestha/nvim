@@ -4,7 +4,6 @@ return {
 	opts = {
 		notify_on_error = false,
 		formatters_by_ft = {
-			c = { "clang-format" },
 			css = { "prettierd", "prettier" },
 			html = { "prettierd", "prettier" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },

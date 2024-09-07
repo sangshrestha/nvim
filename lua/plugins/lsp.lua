@@ -33,7 +33,13 @@ return {
 
 		-- Configure lsp server
 		local servers = {
-			clangd = {},
+			clangd = {
+				settings = {
+					clangd = {
+						cmd = { "clangd", "-fallback-style=microsoft" },
+					},
+				},
+			},
 			cssls = {},
 			emmet_language_server = {},
 			lua_ls = {

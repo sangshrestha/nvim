@@ -4,6 +4,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conform.nvim": { "branch": "master", "commit": "797de8f79055334104cf77893cd93fe3fc2ac154" },
+  "dressing.nvim": { "branch": "master", "commit": "c5775a888adbc50652cb370073fcfec963eca93e" },
   "fzf": { "branch": "master", "commit": "8af0af3400fc36651b59a7e3f9a2bedd4a51daed" },
   "fzf-lua": { "branch": "main", "commit": "8d620a736928bb7f49304c1711511f1f55a12698" },
   "gitsigns.nvim": { "branch": "main", "commit": "f074844b60f9e151970fbcdbeb8a2cd52b6ef25a" },
