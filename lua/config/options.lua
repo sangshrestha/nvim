@@ -46,11 +46,11 @@ opt.confirm = true
 
 -- Show source in diagnostics
 vim.diagnostic.config({
-  severity_sort = true,
-  virtual_text = {
-    source = "always", -- Or "if_many"
-  },
-  float = {
-    source = "always", -- Or "if_many"
-  },
+	severity_sort = true,
+	virtual_text = {
+		source = "always", -- Or "if_many"
+	},
+	float = {
+		source = "always", -- Or "if_many"
+	},
 })
