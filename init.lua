@@ -46,7 +46,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- colorscheme
-colorscheme = quiet
+vim.cmd([[colorscheme quiet]])
 
 -- transparency
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
