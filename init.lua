@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- lsp enable
-vim.lsp.config["clang"] = {
+vim.lsp.config["clangd"] = {
   cmd = { "clangd" },
   filetypes = { "c" },
   init_options = {
@@ -34,7 +34,14 @@ vim.lsp.config["clang"] = {
     },
   },
 }
-vim.lsp.enable("clang")
+
+vim.lsp.config["ts_ls"] = {
+  cmd = { "typescript-language-server" , "--stdio" },
+  filetypes = { "javascript", "typescript" },
+}
+
+vim.lsp.enable("clangd")
+vim.lsp.enable("ts_ls")
 
 -- lsp keybinds
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -43,6 +50,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
   end,
+})
+
+-- diagnostic text
+vim.diagnostic.config({
+  virtual_text = true,
 })
 
 -- colorscheme
