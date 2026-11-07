@@ -1,17 +1,18 @@
 local opt = vim.opt
 local tabspace = 2
 
-opt.hlsearch = false
-opt.number = true
-opt.tabstop = tabspace
-opt.softtabstop = tabspace
-opt.shiftwidth = tabspace
-opt.expandtab = true
-opt.scrolloff = 2
 opt.clipboard = "unnamedplus"
+opt.expandtab = true
+opt.hlsearch = false
 opt.ignorecase = true
-opt.smartcase = true
+opt.number = true
 opt.relativenumber = true
+opt.scrolloff = 2
+opt.shiftwidth = tabspace
+opt.signcolumn = "yes:2"
+opt.smartcase = true
+opt.softtabstop = tabspace
+opt.tabstop = tabspace
 
 -- recursive search
 opt.path:append("**")
@@ -34,7 +35,6 @@ vim.lsp.config["clangd"] = {
     },
   },
 }
-
 vim.lsp.config["ts_ls"] = {
   cmd = { "typescript-language-server" , "--stdio" },
   filetypes = { "javascript", "typescript" },
@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- diagnostic text
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
 })
 
 -- colorscheme
